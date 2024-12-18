@@ -40,5 +40,16 @@ public class Main {
         for (String word : largeWords) {
             System.out.println(word + ": " + largeTextHashTable.get(word));
         }
+
+        // UC 3: Remove the Word "avoidable"
+        largeTextHashTable.remove("avoidable");
+
+        // Display frequencies after removal for UC 3
+        System.out.println("\nWord frequencies after removing 'avoidable':");
+        for (String word : largeWords) {
+            if (!word.equals("avoidable")) {
+                System.out.println(word + ": " + largeTextHashTable.get(word));
+            }
+        }
     }
 }
